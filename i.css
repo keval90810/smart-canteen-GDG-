@@ -1,0 +1,219 @@
+/* body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            justify-content: center;
+        }
+        .menu, .cart {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 50%;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        button {
+            padding: 5px 10px;
+            margin-left: 10px;
+            cursor: pointer;
+            background-color: aquamarine;
+        }
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .total {
+            font-weight: bold;
+            margin-top: 15px;
+        }
+        .payment {
+            margin-top: 20px;
+        }
+        .hidden {
+            display: none;
+        }
+        .confirm {
+            margin-top: 15px;
+            color: green;
+            font-weight: bold;
+        } */
+         /* ===== Google Font ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* ===== Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ===== Body ===== */
+body {
+    background: #f5f6f8;
+    color: #333;
+    min-height: 100vh;
+}
+
+/* ===== Page Header ===== */
+h1 {
+    text-align: center;
+    padding: 20px 0;
+    color: #fc8019;
+    font-size: 26px;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    background: white;
+}
+h2 {
+    color: #fc8019;
+    margin-bottom: 15px;
+    margin-left: 45%;
+}
+
+/* ===== Container ===== */
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+/* ===== Cart Section ===== */
+.cart {
+    flex: 1;
+    background: white;
+    border-radius: 14px;
+    padding: 25px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* ===== Cart Title ===== */
+.cart h2 {
+    color: #fc8019;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+/* ===== Cart Items ===== */
+#cartItems {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+/* ===== Single Cart Item ===== */
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 15px;
+    background: #fafafa;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* ===== Total ===== */
+.total {
+    font-size: 16px;
+    font-weight: 600;
+    text-align: right;
+    color: #111;
+}
+
+/* ===== Payment Section ===== */
+.payment {
+    background: #f9fafb;
+    border-radius: 12px;
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border: 1px solid #eee;
+}
+
+/* ===== Payment Labels ===== */
+.payment label {
+    font-size: 14px;
+    cursor: pointer;
+    display: block;
+    margin-bottom: 6px;
+}
+
+/* ===== Payment Inputs ===== */
+.payment input[type="text"] {
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    width: 100%;
+    margin-top: 5px;
+    font-size: 14px;
+    outline: none;
+    transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.payment input[type="text"]:focus {
+    border-color: #fc8019;
+    box-shadow: 0 0 0 2px rgba(252,128,25,0.15);
+}
+
+/* ===== Hide Sections ===== */
+.hidden {
+    display: none;
+}
+
+/* ===== Place Order Button ===== */
+button {
+    background: #fc8019;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.15s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #f46b10;
+    transform: scale(1.02);
+}
+
+/* ===== Confirmation Message ===== */
+.confirm {
+    font-size: 14px;
+    color: #10b981;
+    margin-top: 8px;
+}
+
+/* ===== Scrollbar Styling ===== */
+#cartItems::-webkit-scrollbar {
+    width: 6px;
+}
+
+#cartItems::-webkit-scrollbar-thumb {
+    background: #fc8019;
+    border-radius: 10px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+}

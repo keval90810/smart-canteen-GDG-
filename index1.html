@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modern Firebase Auth</title>
+  <link rel="stylesheet" href="style1.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="container">
+    <div class="auth-card">
+      <h1 id="form-title">Login</h1>
+
+      <!-- Auth Form -->
+      <form id="auth-form">
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Password">
+        <!-- Username (ONLY for signup) -->
+        <input type="text" id="username" placeholder="Username" style="display:none;">
+
+        <button type="button" id="main-btn" class="btn login-btn">Login</button>
+      </form>
+
+      <!-- Links -->
+      <div class="form-links">
+        <span id="show-login" class="link active">Login</span> |
+        <span id="show-signup" class="link">Sign Up</span> |
+        <span id="show-reset" class="link">Forgot Password</span>
+      </div>
+
+      <p id="msg"></p>
+    </div>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>

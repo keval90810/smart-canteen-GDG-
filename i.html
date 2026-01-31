@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Canteen Ordering System</title>
+   <link rel="stylesheet" href="i.css">
+</head>
+<body>
+
+<h1>🍽 Smart Canteen Ordering System</h1>
+
+<div class="container">
+    <!-- MENU
+    <div class="menu">
+        <h2>Menu</h2>
+        <p>Burger - ₹80 <button onclick="addItem('Burger',80)">Add</button></p>
+        <p>Pizza - ₹120 <button onclick="addItem('Pizza',120)">Add</button></p>
+        <p>Sandwich - ₹60 <button onclick="addItem('Sandwich',60)">Add</button></p>
+        <p>Cold Drink - ₹40 <button onclick="addItem('Cold Drink',40)">Add</button></p>
+    </div> -->
+
+    <!-- CART -->
+    <div class="cart">
+        <h2>Your Order</h2>
+        <div id="cartItems"></div>
+        <div class="total">Total: ₹<span id="totalPrice">0</span></div>
+
+        <div class="payment">
+            <h3>Select Payment Method</h3>
+            <label>
+                <input type="radio" name="payment" value="cod" onclick="showCOD()"> Cash on Delivery
+            </label><br>
+            <label>
+                <input type="radio" name="payment" value="gpay" onclick="showGPay()"> Google Pay
+            </label>
+
+            <!-- COD OPTION -->
+            <div id="codSection" class="hidden">
+                <p>Enter Mobile Number:</p>
+                <input type="text" id="phone" placeholder="10-digit number">
+            </div>
+
+            <!-- GPAY OPTION -->
+            <div id="gpaySection" class="hidden">
+                <p>Enter Google Pay ID:</p>
+                <input type="text" id="gpayId" placeholder="example@upi">
+            </div>
+
+            <button onclick="placeOrder()">Place Order</button>
+            <div id="confirmation" class="confirm"></div>
+        </div>
+    </div>
+</div>
+<script src="i.js"></script>
+
+</body>
+</html>

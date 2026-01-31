@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* ===== Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ===== Body ===== */
+body {
+    background: #f8f9fa;
+    color: #333;
+    min-height: 100vh;
+}
+
+/* ===== Header ===== */
+header {
+    background: #fc8019;
+    color: white;
+    font-size: 22px;
+    font-weight: 600;
+    padding: 18px 30px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+/* ===== Container Grid ===== */
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 25px;
+}
+
+/* ===== Section Cards ===== */
+.section {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 20px;
+   
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.section:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+
+/* ===== Section Title ===== */
+.section h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #fc8019;
+}
+
+/* ===== List Box ===== */
+.list-box {
+    background: #f9f9f9;
+    border-radius: 10px;
+    padding: 15px;
+    max-height: 260px;
+    overflow-y: auto;
+    border: 1px solid #eee;
+}
+
+.list-box::-webkit-scrollbar {
+    width: 6px;
+}
+
+.list-box::-webkit-scrollbar-thumb {
+    background: #fc8019;
+    border-radius: 10px;
+}
+
+/* ===== Forms ===== */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* ===== Inputs ===== */
+input, select {
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    outline: none;
+    transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus, select:focus {
+    border-color: #fc8019;
+    box-shadow: 0 0 0 2px rgba(252,128,25,0.15);
+}
+
+/* ===== Button ===== */
+button {
+    background: #fc8019;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.15s ease;
+}
+
+button:hover {
+    background: #f46b10;
+    transform: scale(1.02);
+}
+
+/* ===== Message ===== */
+.msg {
+    font-size: 13px;
+    margin-top: 4px;
+    color: #2ecc71;
+}
+
+/* ===== Order / Menu Item Cards ===== */
+.order-card,
+.menu-card {
+    background: white;
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 15px;   /* increase spacing */
+    border-left: 4px solid #fc8019;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.order-card h4,
+.menu-card h4 {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+}

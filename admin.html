@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Panel - Smart Canteen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Admin CSS -->
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<header>
+    Canteen Admin Panel
+</header>
+
+<div class="container">
+
+    <!-- 📦 VIEW ORDERS -->
+    <div class="section">
+        <h2>📦 All User Orders</h2>
+        <div id="ordersList" class="list-box"> <br>
+            <!-- Orders appear here -->
+        </div>
+    </div>
+
+    <!-- ➕ ADD MENU ITEM -->
+    <div class="section">
+        <h2>➕ Add New Menu Item</h2>
+
+        <form onsubmit="event.preventDefault(); addMenuItem();">
+            <input id="itemName" type="text" placeholder="Item Name" required>
+
+            <input id="itemPrice" type="number" placeholder="Price (₹)" required>
+
+            <input id="itemMaxQty" type="number" placeholder="Max Quantity" required>
+
+            <input id="itemImage" type="text" placeholder="Image URL" required>
+
+            <button type="submit">Add Item</button>
+            <p id="addMsg" class="msg"></p>
+        </form>
+    </div>
+
+    <!-- 🔄 RESTOCK ITEMS -->
+    <div class="section">
+        <h2>🔄 Restock Menu Items</h2>
+        <div id="menuList" class="list-box">
+            <!-- Menu items appear here -->
+        </div>
+    </div>
+
+    <!-- 🔁 UPDATE ORDER STATUS -->
+    <div class="section">
+        <h2>🔁 Update Order Status</h2>
+
+        <form onsubmit="event.preventDefault(); updateStatus();">
+            <input id="orderId" type="text" placeholder="Order ID" required>
+
+            <select id="status" required>
+                <option value="Preparing">Preparing</option>
+                <option value="Ready">Ready</option>
+            </select>
+
+            <button type="submit">Update Status</button>
+            <p id="statusMsg" class="msg"></p>
+        </form>
+    </div>
+
+</div>
+
+<!-- Admin JS -->
+<script src="admin.js"></script>
+
+</body>
+</html>
+
